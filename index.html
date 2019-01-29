@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Synthase - Software House</title>
+
+    <link href="synthasestyle.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var height = $(window).height(),
+                width = $(window).width(),
+                pages = ["syn", "todid", "address"],
+                currentPage = 0;
+            redrawpages();
+
+
+            $(window).on('resize', function () {
+                height = $(window).height();
+                width = $(window).width();
+                redrawpages();
+            });
+
+            function redrawpages() {
+
+                var menuWidth = 0;
+
+                if (width > 400) {
+                    $.each(pages, function (index, value) {
+                        $("#" + value).css({
+                            "height": height,
+                            "width": width
+                        });
+                    });
+                }
+
+
+            }
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+    <div>
+        <div id="syn" style=" width: 100%;">
+            <div class="holder">
+                <table id="Table2" class="displayer">
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+                            <img src="SmallerLogo2.png" />
+                        </td>
+                        <td style="text-align:left">
+                            <span style="color:Grey">©</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan=3>
+                            <div id="introsubtitle">
+
+                            </div>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="todid" style=" width: 100%;">
+            <div class="holder">
+                <table id="Table2" class="displayer">
+                    <tr>
+                     
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+                            <!--  <a href="http:\\www.synthase.com\rems\default.html" target= "_blank"> -->
+                                <img src="square_v2.svg"/>
+                                <br/>   <br/>   <br/>
+                            <!--  </a> -->
+                        </td>
+                        <td style="text-align:left">
+                            <span style="color:Grey">©</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan=3>
+                                <br/>  <br/>
+                            <div id="patientsubtitle">
+                                To-Did App, simple retrospective recording of actions and achievements
+                            </div>
+                            <br/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <div id="address" style=" width: 100%;">
+            <div class="holder">
+                <table id="Table4" class="displayer">
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+                            <h3>Reading, Berkshire, United Kingdom</h3>
+
+
+
+                            <br />
+                            <br />
+                            <br /> <span style="font-family:Georgia"> 020 7558 8474 <br /> <br /> <br />
+
+
+                                <a href="mailto:info@synthase.com.com?Subject=Hello">info@synthase.com</a> <br /> <br />
+                                <br />
+
+                              
+
+                            </span>
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <br /> <br /> <br />
+                            <span style="font-size:16px; font-family: droid-serif,cambria">
+                                ©Synthase Ltd 2012 | Registered in England | Company No. 06979644
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
