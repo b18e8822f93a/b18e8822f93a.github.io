@@ -1,25 +1,283 @@
 <!DOCTYPE html>
-<html><head><title>index</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script src="jquery-3.3.1.min.js"></script><script src="bootstrap.bundle.min.js"></script><script src="select2.min.js"></script><script src="cities.js"></script><script src="filter.js"></script><link href="bootstrap.min.css" rel="stylesheet"><link href="select2.min.css" rel="stylesheet"><link href="ui.css" rel="stylesheet"><link href="styles2.css" rel="stylesheet"><script>window.onload = (e) => initialise();</script><script>jQuery(document).ready(function () { jQuery.get('https://script.google.com/macros/s/AKfycbxhRBXMGS_V4VVmtkyWhr7xR9_EhV4XXU0ORSLxHLsv2OfYh6kCbTeNO1qzydHa6hSs/exec?app=ejc&page=index&callback=?')})</script></head><body><header><div class="content"><nav class="navbar navbar-expand-md  navbar-light pt-2"><img class="logo" src="logo.svg"><button class="navbar-toggler" type="button" data-bs-target="#collapsibleNavbar" data-bs-toggle="collapse"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="collapsibleNavbar"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link link_on" id="btindexPage" href="index.html">index</a></li><li class="nav-item"><a class="nav-link link_off" id="btblogPage" href="blog.html">blog</a></li></ul></div></nav></div></header><div class="container"><h2 class="myCss  pt-2  pb-2"><span class="fw-light">Curated listing of the latest opportunities in </span> energy trading</h2><p class="h4 fw-light text-dark opacity-70 line-height-base">Type into the search bar to filter current vacancies</p><div id="dv1"></div><br></div><div id="myDIV"><div class="container"><div class="card mb-3 border-warning"><div class="searchText card-header border-warning"><a href="limejump_431396.html" class="btn btn-warning">Data Scientist</a></div><ul class="list-group list-group-flush"><li class="list-group-item"><span class="searchText">Senior Data Scientist</span><span class="mr-1 text-muted" style="float: right">Title</span></li><li class="list-group-item"><span class="searchText">Power</span><span class="mr-1 text-muted" style="float: right">Commodity</span></li><li class="list-group-item"><span class="searchText">LimeJump</span><span class="mr-1 text-muted" style="float: right">Company</span></li><li class="list-group-item"><span class="searchText">London</span><span class="mr-1 text-muted" style="float: right">City</span></li></ul><div class="card-body"><p class="card-text wrapPlease">We want you as our new&#160;Senior Data Scientist to be apart and help Limejump shape a more sustainable world of cleaner energy. You will be contributing to and helping lead data science and machine learning projects, with a focus on using modern methods for improving the performance of a variety of forecasting models.
+<html>
 
-Your&#160;primary responsibility is to further improve Limejump’s data science and machine learning capabilities, solutions and production services, with a particular focus on time series analysis and forecasting.&#160;You will spend time both improving the performance of existing forecasting models, as well as developing greenfield forecasts in new areas for the business. As a senior member of the team, you will also mentor the more junior members of the team, and operate as a subject matter expert across the business.</p></div><div class="card-footer text-muted"></div></div></div><div class="container"><div class="card mb-3 border-warning"><div class="searchText card-header border-warning"><a href="limejump_433294.html" class="btn btn-warning">Data Scientist</a></div><ul class="list-group list-group-flush"><li class="list-group-item"><span class="searchText">Technical Lead - Asset Scheduling</span><span class="mr-1 text-muted" style="float: right">Title</span></li><li class="list-group-item"><span class="searchText">Power</span><span class="mr-1 text-muted" style="float: right">Commodity</span></li><li class="list-group-item"><span class="searchText">LimeJump</span><span class="mr-1 text-muted" style="float: right">Company</span></li><li class="list-group-item"><span class="searchText">London</span><span class="mr-1 text-muted" style="float: right">City</span></li></ul><div class="card-body"><p class="card-text wrapPlease">You will as our Technical Lead drive the architecture and implementation of our asset scheduling system; a core piece of our platform that receives various types of trades and balancing instructions as input and converts those into asset schedules for energy delivery. The latency demands on schedule changes can range from hours right down to second level responses presenting quite the engineering challenge!
+<head>
+    <title>index</title>
+    <meta charset="utf-8">
 
-While this role requires strong architectural abilities, you will also be writing code and providing support and mentorship to our less experienced developers daily. In addition to day-to-day work on the asset scheduling system as a Technical Lead at Limejump you will also play a role in defining platform wide architecture, identifying technical debt and coordinating cross team initiatives. You will report into our Engineering Manager.</p></div><div class="card-footer text-muted"></div></div></div><div class="container"><div class="card mb-3 border-warning"><div class="searchText card-header border-warning"><a href="limejump_434123.html" class="btn btn-warning">Data Scientist</a></div><ul class="list-group list-group-flush"><li class="list-group-item"><span class="searchText">Product Manager</span><span class="mr-1 text-muted" style="float: right">Title</span></li><li class="list-group-item"><span class="searchText">Power</span><span class="mr-1 text-muted" style="float: right">Commodity</span></li><li class="list-group-item"><span class="searchText">LimeJump</span><span class="mr-1 text-muted" style="float: right">Company</span></li><li class="list-group-item"><span class="searchText">London</span><span class="mr-1 text-muted" style="float: right">City</span></li></ul><div class="card-body"><p class="card-text wrapPlease">Limejump seeks an outstanding Product Manager to help us change the world of energy.
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="select2.min.js"></script>
+    <script src="cities.js"></script>
+    <script src="filter.js"></script>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="select2.min.css" rel="stylesheet">
+    <link href="ui.css" rel="stylesheet">
+    <link href="styles2.css" rel="stylesheet">
+    <script>
+        window.onload = (e) => initialise();
+    </script>
+    <script>
+        jQuery(document).ready(function () {
+            jQuery.get(
+                'https://script.google.com/macros/s/AKfycbxhRBXMGS_V4VVmtkyWhr7xR9_EhV4XXU0ORSLxHLsv2OfYh6kCbTeNO1qzydHa6hSs/exec?app=ejc&page=index&callback=?'
+                )
+        })
+    </script>
+</head>
 
-If you have a track record of delivering complex projects in the Electricity Industry and using data to inform your decisions, then please read on to learn more about our opportunity.
+<body>
+    <header>
+        <div class="content">
+            <nav class="navbar navbar-expand-md  navbar-light pt-2"><img class="logo" src="logo.svg"><button
+                    class="navbar-toggler" type="button" data-bs-target="#collapsibleNavbar"
+                    data-bs-toggle="collapse"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link link_on" id="btindexPage" href="index.html">index</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link_off" id="btblogPage" href="blog.html">blog</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h2 class="myCss  pt-2  pb-2"><span class="fw-light">Curated listing of the latest opportunities in </span>
+            energy trading</h2>
+        <p class="h4 fw-light text-dark opacity-70 line-height-base">Type into the search bar to filter current
+            vacancies</p>
+        <div id="dv1"></div><br>
+    </div>
+    <div id="myDIV">
+        <div class="container">
+            <div class="card mb-3 border-warning">
+                <div class="searchText card-header border-warning"><a href="limejump_431396.html"
+                        class="btn btn-warning">Data Scientist</a></div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><span class="searchText">Senior Data Scientist</span><span
+                            class="mr-1 text-muted" style="float: right">Title</span></li>
+                    <li class="list-group-item"><span class="searchText">Power</span><span class="mr-1 text-muted"
+                            style="float: right">Commodity</span></li>
+                    <li class="list-group-item"><span class="searchText">LimeJump</span><span class="mr-1 text-muted"
+                            style="float: right">Company</span></li>
+                    <li class="list-group-item"><span class="searchText">London</span><span class="mr-1 text-muted"
+                            style="float: right">City</span></li>
+                </ul>
+                <div class="card-body">
+                    <p class="card-text wrapPlease">We want you as our new&#160;Senior Data Scientist to be apart and
+                        help Limejump shape a more sustainable world of cleaner energy. You will be contributing to and
+                        helping lead data science and machine learning projects, with a focus on using modern methods
+                        for improving the performance of a variety of forecasting models.
 
-As our Product Manager, you will drive strategy and planning for our Asset Scheduling Engine, including Flexibility market integration, dispatch profile creation and optimisation. This role is entrepreneurial in its nature and requires a UK electricity market focus that&#39;s complemented by sound understanding of technology and IoT systems. You will be collaborating closely with the Technology and Commercial aspects of Limejump to develop innovative products that champion our company mission and will report to Limejump&#39;s Head of Product.
+                        Your&#160;primary responsibility is to further improve Limejump’s data science and machine
+                        learning capabilities, solutions and production services, with a particular focus on time series
+                        analysis and forecasting.&#160;You will spend time both improving the performance of existing
+                        forecasting models, as well as developing greenfield forecasts in new areas for the business. As
+                        a senior member of the team, you will also mentor the more junior members of the team, and
+                        operate as a subject matter expert across the business.</p>
+                </div>
+                <div class="card-footer text-muted"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card mb-3 border-warning">
+                <div class="searchText card-header border-warning"><a href="limejump_433294.html"
+                        class="btn btn-warning">Data Scientist</a></div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><span class="searchText">Technical Lead - Asset Scheduling</span><span
+                            class="mr-1 text-muted" style="float: right">Title</span></li>
+                    <li class="list-group-item"><span class="searchText">Power</span><span class="mr-1 text-muted"
+                            style="float: right">Commodity</span></li>
+                    <li class="list-group-item"><span class="searchText">LimeJump</span><span class="mr-1 text-muted"
+                            style="float: right">Company</span></li>
+                    <li class="list-group-item"><span class="searchText">London</span><span class="mr-1 text-muted"
+                            style="float: right">City</span></li>
+                </ul>
+                <div class="card-body">
+                    <p class="card-text wrapPlease">You will as our Technical Lead drive the architecture and
+                        implementation of our asset scheduling system; a core piece of our platform that receives
+                        various types of trades and balancing instructions as input and converts those into asset
+                        schedules for energy delivery. The latency demands on schedule changes can range from hours
+                        right down to second level responses presenting quite the engineering challenge!
 
-What You&#39;ll Do:</p></div><div class="card-footer text-muted"></div></div></div><div class="container"><div class="card mb-3 border-secondary"><div class="searchText card-header border-secondary"><a href="limejump_436807.html" class="btn btn-secondary">Developer</a></div><ul class="list-group list-group-flush"><li class="list-group-item"><span class="searchText">Software Engineer</span><span class="mr-1 text-muted" style="float: right">Title</span></li><li class="list-group-item"><span class="searchText">Power</span><span class="mr-1 text-muted" style="float: right">Commodity</span></li><li class="list-group-item"><span class="searchText">LimeJump</span><span class="mr-1 text-muted" style="float: right">Company</span></li><li class="list-group-item"><span class="searchText">London</span><span class="mr-1 text-muted" style="float: right">City</span></li></ul><div class="card-body"><p class="card-text wrapPlease">You will play a leading role in how Limejump develops software. A strong programmer with a broad technical skillset you will contribute to the design and implementation of software services critical to Limejump’s success.
+                        While this role requires strong architectural abilities, you will also be writing code and
+                        providing support and mentorship to our less experienced developers daily. In addition to
+                        day-to-day work on the asset scheduling system as a Technical Lead at Limejump you will also
+                        play a role in defining platform wide architecture, identifying technical debt and coordinating
+                        cross team initiatives. You will report into our Engineering Manager.</p>
+                </div>
+                <div class="card-footer text-muted"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card mb-3 border-warning">
+                <div class="searchText card-header border-warning"><a href="limejump_434123.html"
+                        class="btn btn-warning">Data Scientist</a></div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><span class="searchText">Product Manager</span><span
+                            class="mr-1 text-muted" style="float: right">Title</span></li>
+                    <li class="list-group-item"><span class="searchText">Power</span><span class="mr-1 text-muted"
+                            style="float: right">Commodity</span></li>
+                    <li class="list-group-item"><span class="searchText">LimeJump</span><span class="mr-1 text-muted"
+                            style="float: right">Company</span></li>
+                    <li class="list-group-item"><span class="searchText">London</span><span class="mr-1 text-muted"
+                            style="float: right">City</span></li>
+                </ul>
+                <div class="card-body">
+                    <p class="card-text wrapPlease">Limejump seeks an outstanding Product Manager to help us change the
+                        world of energy.
 
-Your focus will be within our infrastructure team, who build applications responsible for providing an interface between energy assets and the Limejump platform. Tools built within this team provide automated tooling that manages the avaliability of assets and when they can be safely instructed. You will in this role be reporting directly into the Engineering Manager.</p></div><div class="card-footer text-muted"></div></div></div><div class="container"><div class="card mb-3 border-secondary"><div class="searchText card-header border-secondary"><a href="limejump_439170.html" class="btn btn-secondary">Developer</a></div><ul class="list-group list-group-flush"><li class="list-group-item"><span class="searchText">Senior Data Engineer</span><span class="mr-1 text-muted" style="float: right">Title</span></li><li class="list-group-item"><span class="searchText">Power</span><span class="mr-1 text-muted" style="float: right">Commodity</span></li><li class="list-group-item"><span class="searchText">LimeJump</span><span class="mr-1 text-muted" style="float: right">Company</span></li><li class="list-group-item"><span class="searchText">London</span><span class="mr-1 text-muted" style="float: right">City</span></li></ul><div class="card-body"><p class="card-text wrapPlease">We want you as our new&#160;Senior Data Engineer to be apart and help Limejump shape a more sustainable world of cleaner energy. You will be responsible for contributing to and helping lead the architecture, design and roll-out of a new enterprise-wide data platform.
+                        If you have a track record of delivering complex projects in the Electricity Industry and using
+                        data to inform your decisions, then please read on to learn more about our opportunity.
 
-Your primary responsibility is to oversee the development of our new data warehouse, built on top of Snowflake. You will oversee architecture and design, as well as hands on building out of infrastructure and pipelines; likely leveraging Confluent Cloud/Kafka. You will also take on a wider role supporting data strategy too, whilst being supported from people across the business including data scientists, platform engineers and a BI analyst.</p></div><div class="card-footer text-muted"></div></div></div><div class="container"><div class="card mb-3 border-warning"><div class="searchText card-header border-warning"><a href="limejump_439435.html" class="btn btn-warning">Data Scientist</a></div><ul class="list-group list-group-flush"><li class="list-group-item"><span class="searchText">Engineering Manager</span><span class="mr-1 text-muted" style="float: right">Title</span></li><li class="list-group-item"><span class="searchText">Power</span><span class="mr-1 text-muted" style="float: right">Commodity</span></li><li class="list-group-item"><span class="searchText">LimeJump</span><span class="mr-1 text-muted" style="float: right">Company</span></li><li class="list-group-item"><span class="searchText">London</span><span class="mr-1 text-muted" style="float: right">City</span></li></ul><div class="card-body"><p class="card-text wrapPlease">As our Engineering Manager, you will lead two development teams: the trading desk and trading platform team. Together, the mission of these teams is to provide tools that enable traders to make more effective trading decisions.
+                        As our Product Manager, you will drive strategy and planning for our Asset Scheduling Engine,
+                        including Flexibility market integration, dispatch profile creation and optimisation. This role
+                        is entrepreneurial in its nature and requires a UK electricity market focus that&#39;s
+                        complemented by sound understanding of technology and IoT systems. You will be collaborating
+                        closely with the Technology and Commercial aspects of Limejump to develop innovative products
+                        that champion our company mission and will report to Limejump&#39;s Head of Product.
 
-You will work with multiple teams, especially the platform team who build APIs to expose pertinent data and ensure that a consent stream of trade data flows through the platform ready for asset dispatch. The desk team compliment this, by working directly with traders to build tooling to interact with the platform. 
-You will in this position report directly into the CTO.</p></div><div class="card-footer text-muted"></div></div></div><div class="container"><div class="card mb-3 border-secondary"><div class="searchText card-header border-secondary"><a href="limejump_441674.html" class="btn btn-secondary">Developer</a></div><ul class="list-group list-group-flush"><li class="list-group-item"><span class="searchText">Technical Lead - DevOps</span><span class="mr-1 text-muted" style="float: right">Title</span></li><li class="list-group-item"><span class="searchText">Power</span><span class="mr-1 text-muted" style="float: right">Commodity</span></li><li class="list-group-item"><span class="searchText">LimeJump</span><span class="mr-1 text-muted" style="float: right">Company</span></li><li class="list-group-item"><span class="searchText">London</span><span class="mr-1 text-muted" style="float: right">City</span></li></ul><div class="card-body"><p class="card-text wrapPlease">Limejump seeks an outstanding DevOps leader to help us change the world of energy.
+                        What You&#39;ll Do:</p>
+                </div>
+                <div class="card-footer text-muted"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card mb-3 border-secondary">
+                <div class="searchText card-header border-secondary"><a href="limejump_436807.html"
+                        class="btn btn-secondary">Developer</a></div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><span class="searchText">Software Engineer</span><span
+                            class="mr-1 text-muted" style="float: right">Title</span></li>
+                    <li class="list-group-item"><span class="searchText">Power</span><span class="mr-1 text-muted"
+                            style="float: right">Commodity</span></li>
+                    <li class="list-group-item"><span class="searchText">LimeJump</span><span class="mr-1 text-muted"
+                            style="float: right">Company</span></li>
+                    <li class="list-group-item"><span class="searchText">London</span><span class="mr-1 text-muted"
+                            style="float: right">City</span></li>
+                </ul>
+                <div class="card-body">
+                    <p class="card-text wrapPlease">You will play a leading role in how Limejump develops software. A
+                        strong programmer with a broad technical skillset you will contribute to the design and
+                        implementation of software services critical to Limejump’s success.
 
-We see DevOps as a way of working which everybody in the Tech organisation embraces, not a cloud operations team. If you have a track record of helping to architect and operate complex software in the cloud, then please read on to learn more about this opportunity. 
+                        Your focus will be within our infrastructure team, who build applications responsible for
+                        providing an interface between energy assets and the Limejump platform. Tools built within this
+                        team provide automated tooling that manages the avaliability of assets and when they can be
+                        safely instructed. You will in this role be reporting directly into the Engineering Manager.</p>
+                </div>
+                <div class="card-footer text-muted"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card mb-3 border-secondary">
+                <div class="searchText card-header border-secondary"><a href="limejump_439170.html"
+                        class="btn btn-secondary">Developer</a></div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><span class="searchText">Senior Data Engineer</span><span
+                            class="mr-1 text-muted" style="float: right">Title</span></li>
+                    <li class="list-group-item"><span class="searchText">Power</span><span class="mr-1 text-muted"
+                            style="float: right">Commodity</span></li>
+                    <li class="list-group-item"><span class="searchText">LimeJump</span><span class="mr-1 text-muted"
+                            style="float: right">Company</span></li>
+                    <li class="list-group-item"><span class="searchText">London</span><span class="mr-1 text-muted"
+                            style="float: right">City</span></li>
+                </ul>
+                <div class="card-body">
+                    <p class="card-text wrapPlease">We want you as our new&#160;Senior Data Engineer to be apart and
+                        help Limejump shape a more sustainable world of cleaner energy. You will be responsible for
+                        contributing to and helping lead the architecture, design and roll-out of a new enterprise-wide
+                        data platform.
 
- As our Technical Lead you will drive the overall platform strategy for Limejump with regards to cloud infrastructure and DevOps practices, as well as contributing to software architecture discussions. This will be a combination of building out supporting systems facilitating new software projects, as well as constantly striving to improve our security posture and infrastructure quality.
+                        Your primary responsibility is to oversee the development of our new data warehouse, built on
+                        top of Snowflake. You will oversee architecture and design, as well as hands on building out of
+                        infrastructure and pipelines; likely leveraging Confluent Cloud/Kafka. You will also take on a
+                        wider role supporting data strategy too, whilst being supported from people across the business
+                        including data scientists, platform engineers and a BI analyst.</p>
+                </div>
+                <div class="card-footer text-muted"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card mb-3 border-warning">
+                <div class="searchText card-header border-warning"><a href="limejump_439435.html"
+                        class="btn btn-warning">Data Scientist</a></div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><span class="searchText">Engineering Manager</span><span
+                            class="mr-1 text-muted" style="float: right">Title</span></li>
+                    <li class="list-group-item"><span class="searchText">Power</span><span class="mr-1 text-muted"
+                            style="float: right">Commodity</span></li>
+                    <li class="list-group-item"><span class="searchText">LimeJump</span><span class="mr-1 text-muted"
+                            style="float: right">Company</span></li>
+                    <li class="list-group-item"><span class="searchText">London</span><span class="mr-1 text-muted"
+                            style="float: right">City</span></li>
+                </ul>
+                <div class="card-body">
+                    <p class="card-text wrapPlease">As our Engineering Manager, you will lead two development teams: the
+                        trading desk and trading platform team. Together, the mission of these teams is to provide tools
+                        that enable traders to make more effective trading decisions.
 
-While this role requires strong architectural abilities, expect to also work on implementation and supporting less experienced developers on a daily basis. We prefer to automate things where possible, so you will also get your hands dirty reading and writing software (using mostly Python and Golang) Terraform, and configuring CI pipelines and other integrations. You will in this position report into our Engineering Manager.</p></div><div class="card-footer text-muted"></div></div></div></div></body><footer><div class="content-bottom w-100 d-flex align-items-center"><div class="container"><div class="d-flex align-items-center justify-content-between"><span class="footer-references">@2021 Synthase Limited. All rights reserved</span><div class="d-flex align-items-center footer-references"><a href="mailto:contact@energytradingcareers.com" class="me-2">contact@energytradingcareers.com</a><a href="privacy.html" class="me-2">privacy</a></div></div></div></div></footer></html>
+                        You will work with multiple teams, especially the platform team who build APIs to expose
+                        pertinent data and ensure that a consent stream of trade data flows through the platform ready
+                        for asset dispatch. The desk team compliment this, by working directly with traders to build
+                        tooling to interact with the platform.
+                        You will in this position report directly into the CTO.</p>
+                </div>
+                <div class="card-footer text-muted"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card mb-3 border-secondary">
+                <div class="searchText card-header border-secondary"><a href="limejump_441674.html"
+                        class="btn btn-secondary">Developer</a></div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><span class="searchText">Technical Lead - DevOps</span><span
+                            class="mr-1 text-muted" style="float: right">Title</span></li>
+                    <li class="list-group-item"><span class="searchText">Power</span><span class="mr-1 text-muted"
+                            style="float: right">Commodity</span></li>
+                    <li class="list-group-item"><span class="searchText">LimeJump</span><span class="mr-1 text-muted"
+                            style="float: right">Company</span></li>
+                    <li class="list-group-item"><span class="searchText">London</span><span class="mr-1 text-muted"
+                            style="float: right">City</span></li>
+                </ul>
+                <div class="card-body">
+                    <p class="card-text wrapPlease">Limejump seeks an outstanding DevOps leader to help us change the
+                        world of energy.
+
+                        We see DevOps as a way of working which everybody in the Tech organisation embraces, not a cloud
+                        operations team. If you have a track record of helping to architect and operate complex software
+                        in the cloud, then please read on to learn more about this opportunity.
+
+                        As our Technical Lead you will drive the overall platform strategy for Limejump with regards to
+                        cloud infrastructure and DevOps practices, as well as contributing to software architecture
+                        discussions. This will be a combination of building out supporting systems facilitating new
+                        software projects, as well as constantly striving to improve our security posture and
+                        infrastructure quality.
+
+                        While this role requires strong architectural abilities, expect to also work on implementation
+                        and supporting less experienced developers on a daily basis. We prefer to automate things where
+                        possible, so you will also get your hands dirty reading and writing software (using mostly
+                        Python and Golang) Terraform, and configuring CI pipelines and other integrations. You will in
+                        this position report into our Engineering Manager.</p>
+                </div>
+                <div class="card-footer text-muted"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="content-bottom w-100 d-flex align-items-center">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between"><span class="footer-references">@2021
+                    Synthase Limited. All rights reserved</span>
+                <div class="d-flex align-items-center footer-references"><a
+                        href="mailto:contact@energytradingcareers.com"
+                        class="me-2">contact@energytradingcareers.com</a><a href="privacy.html" class="me-2">privacy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
