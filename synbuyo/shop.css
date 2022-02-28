@@ -1,0 +1,17 @@
+.tagSpan {
+
+    letter-spacing: .025rem;
+    font-size: 1.em;
+    box-sizing: border-box;
+    flex-basis: 100%;
+    display: inline-block;
+    border-radius: .2em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-family: neo-sans, "sans-serif";
+    padding: 0 .4rem;
+    color: #fff;
+    font-weight: 500;
+    background-color: #00cdb2;
+}
