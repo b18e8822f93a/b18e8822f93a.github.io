@@ -12,17 +12,26 @@ const basePage = {
         if (globalVariable.showTable == 1) {
             //e//lem.classList.add('hiding2');
             $('.dvTable').toggleClass("hiding2", true);//.hide();
+
             $('.dvChart').toggleClass("hiding2", false);
+            $('.dvChart2').toggleClass("hiding2", true);
 
+        }
+        else if (globalVariable.showTable == 2) {
+            $('.dvTable').toggleClass("hiding2", true);//.hide();
 
+            $('.dvChart').toggleClass("hiding2", false);
+            $('.dvChart2').toggleClass("hiding2", true);
         }
         else {
 
             $('.dvTable').toggleClass("hiding2", false);
             $('.dvChart').toggleClass("hiding2", true);
+            $('.dvChart2').toggleClass("hiding2", true);
         }
         console.log("reflow it");
-        $('.dvChart').highcharts().reflow(); $('#dvChart').highcharts().reflow();
+        $('.dvChart').highcharts().reflow();
+        // $('#dvChart').highcharts().reflow();
     },
     dispatch: function (message) {
         switch (message.key) {

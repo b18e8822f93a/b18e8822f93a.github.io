@@ -1,0 +1,1 @@
+const macroKey = "https://script.google.com/macros/s/AKfycbyAbXa_50q8mRvm1xxqaudQM2eoBcPAVH6b-TxHVVav0MUweQYakz6TQTqzJFBINyU/exec?app=unavailabilities&page=app&callback=?"

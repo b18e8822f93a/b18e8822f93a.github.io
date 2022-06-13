@@ -76,7 +76,7 @@ const outageModule = {
             tb0 += element.endDate;
             tb0 += '</td>';
             tb0 += '<td>';
-            tb0 += element.createdDate;
+            tb0 += element.publishedDate;
             tb0 += '</td>';
             tb0 += '</tr>';
         })
@@ -109,7 +109,7 @@ const outagePage = {
 
         var q0 = globalVariable.filterLabel === '*' ? outageRows : outageRows.filter(x => x.fuelName == globalVariable.filterLabel)
         //var q = globalVariable.isLatestOnly == '0' ? q0 : q0.filter(x => x.isLatest == 1)
-        var q = globalVariable.byDate === '*' ? q0 : q0.filter(x => x.createdDate == globalVariable.byDate)
+        var q = globalVariable.byDate === '*' ? q0 : q0.filter(x => x.publishedDate == globalVariable.byDate)
 
 
         let tableDiv = document.querySelector('#dvTable2');
@@ -119,15 +119,18 @@ const outagePage = {
     reDrawChart: function () {
 
         if (globalVariable.btnRadioValue == 0) {
-            var q0 = globalVariable.filterLabel === '*' ? unitChartSeries : unitChartSeries.filter(x => x.label == globalVariable.filterLabel)
+            var q0 = globalVariable.filterLabel === '*' ? unitChartSeries : unitChartSeries.filter(x => x.label == globalVariable.filterLabel.replaceAll(' ', ''))
             var q = globalVariable.byDate === '*' ? q0 : q0.filter(x => x.key1 == globalVariable.byDate)
-            console.log(unitChartSeries)
-            addChart(q, "dvChart2", outageChart);
+            var q3 = globalVariable.isTwoYears === "0" ? q : q.map(o => { return { ...o, data: o.data.filter(x => x[2] === 0) }; });
+            console.log(globalVariable.filterLabel.replace(' ', ''))
+            console.log(globalVariable.isTwoYears, "isTwoYears")
+            console.log(q3, "unit chart series")
+            addChart(q3, "dvChart2", outageChart);
         }
         else {
-            var q0 = globalVariable.filterLabel === '*' ? fuelChartSeries : fuelChartSeries.filter(x => x.name == globalVariable.filterLabel)
+            var q0 = globalVariable.filterLabel === '*' ? fuelChartSeries : fuelChartSeries.filter(x => x.name == globalVariable.filterLabel.replaceAll(' ', ''))
             var q = globalVariable.byDate === '*' ? q0 : q0.filter(x => x.key1 == globalVariable.byDate)
-            console.log(fuelChartSeries)
+            console.log(q, "fuel outage chart")
             addChart(q, "dvChart2", outageChart);
         }
     },
@@ -135,6 +138,11 @@ const outagePage = {
         switch (message.key) {
             case "switchChart":
                 globalVariable.btnRadioValue = message.value;
+                this.reDrawChart();
+                break;
+
+            case "twoYears":
+                globalVariable.isTwoYears = message.value;
                 this.reDrawChart();
                 break;
             case "filter":
@@ -155,6 +163,8 @@ const outagePage = {
                 this.reDrawTable()
                 this.reDrawChart();
                 break;
+
+
         }
 
     },
@@ -170,6 +180,9 @@ const outagePage = {
 
         radioButtonCreate.setUpEventListenersRadioButton('btnRadioE', (v) =>
             outagePage.dispatch({ key: 'latest', value: v }));
+
+        radioButtonCreate.setUpEventListenersRadioButton('btnRadioZ', (v) =>
+            outagePage.dispatch({ key: 'twoYears', value: v }));
 
         document.getElementById("sl2").onchange = function (x) {
 
