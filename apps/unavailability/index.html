@@ -1,11 +1,11 @@
 <html>
 
 <head>
-    <script src="../.scripts/jquery-3.3.1.min.js"></script>
-    <script src="../.scripts/bootstrap.min.js"></script>
-    <script src="../.scripts/highcharts.js"></script>
-    <script src="../.scripts/themes/dark-unica.js"></script>
-    <link rel="stylesheet" href="../.scripts/bootstrap.min.css" />
+    <script src="../cdn/jquery-3.3.1.min.js"></script>
+    <script src="../cdn/bootstrap.min.js"></script>
+    <script src="../cdn/highcharts.js"></script>
+    <script src="../cdn/themes/dark-unica.js"></script>
+    <link rel="stylesheet" href="../cdn/bootstrap.min.css" />
 
     <script src="outageModule.js">    </script>
     <script src="plantsModule.js">    </script>
@@ -18,10 +18,11 @@
     <link href='frame.css' rel='stylesheet' />
     <link href='outages.css' rel='stylesheet' />
 
-    <script src="_.data\outageSeries.js"></script>
+    <script src="json\outageSeries.js"></script>
 
-    <script src="_.data\plants.js">    </script>
+    <script src="json\plants.js">    </script>
     <script src="../tsc.js">    </script>
+    <script src="../macro.js">    </script>
     <style>
         .hiding {
             display: none;
@@ -40,8 +41,8 @@
         };
 
         jQuery(document).ready(function () {
-            // if (location.protocol === 'https:')
-            jQuery.get('https://script.google.com/macros/s/AKfycbxhRBXMGS_V4VVmtkyWhr7xR9_EhV4XXU0ORSLxHLsv2OfYh6kCbTeNO1qzydHa6hSs/exec?app=unavailabilities&page=app&callback=?')
+            if (location.protocol === 'https:')
+                jQuery.get(macroKey)
         });
 
     </script>
