@@ -3,7 +3,8 @@ const globalVariable = {
     uniqueFuels: [],
     filterLabel: '*',
     isLatestOnly: 0,
-    byDate: '*'
+    byDate: '*',
+    isTwoYears: "0",
 };
 
 
@@ -14,20 +15,20 @@ const basePage = {
             $('.dvTable').toggleClass("hiding2", true);//.hide();
 
             $('.dvChart').toggleClass("hiding2", false);
-            $('.dvChart2').toggleClass("hiding2", true);
+            $('.clCharts').toggleClass("hiding2", false);
 
         }
         else if (globalVariable.showTable == 2) {
             $('.dvTable').toggleClass("hiding2", true);//.hide();
 
             $('.dvChart').toggleClass("hiding2", false);
-            $('.dvChart2').toggleClass("hiding2", true);
+            $('.clCharts').toggleClass("hiding2", false);
         }
         else {
 
             $('.dvTable').toggleClass("hiding2", false);
             $('.dvChart').toggleClass("hiding2", true);
-            $('.dvChart2').toggleClass("hiding2", true);
+            $('.clCharts').toggleClass("hiding2", true);
         }
         console.log("reflow it");
         $('.dvChart').highcharts().reflow();

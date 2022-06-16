@@ -121,7 +121,7 @@ const outagePage = {
         if (globalVariable.btnRadioValue == 0) {
             var q0 = globalVariable.filterLabel === '*' ? unitChartSeries : unitChartSeries.filter(x => x.label == globalVariable.filterLabel.replaceAll(' ', ''))
             var q = globalVariable.byDate === '*' ? q0 : q0.filter(x => x.key1 == globalVariable.byDate)
-            var q3 = globalVariable.isTwoYears === "0" ? q : q.map(o => { return { ...o, data: o.data.filter(x => x[2] === 0) }; });
+            var q3 = globalVariable.isTwoYears !== "0" ? q : q.map(o => { return { ...o, data: o.data.filter(x => x[2] === 0) }; });
             console.log(globalVariable.filterLabel.replace(' ', ''))
             console.log(globalVariable.isTwoYears, "isTwoYears")
             console.log(q3, "unit chart series")
@@ -130,8 +130,9 @@ const outagePage = {
         else {
             var q0 = globalVariable.filterLabel === '*' ? fuelChartSeries : fuelChartSeries.filter(x => x.name == globalVariable.filterLabel.replaceAll(' ', ''))
             var q = globalVariable.byDate === '*' ? q0 : q0.filter(x => x.key1 == globalVariable.byDate)
-            console.log(q, "fuel outage chart")
-            addChart(q, "dvChart2", outageChart);
+            var q3 = globalVariable.isTwoYears !== "0" ? q : q.map(o => { return { ...o, data: o.data.filter(x => x[2] === 0) }; });
+
+            addChart(q3, "dvChart2", outageChart);
         }
     },
     dispatch: function (message) {
@@ -181,7 +182,7 @@ const outagePage = {
         radioButtonCreate.setUpEventListenersRadioButton('btnRadioE', (v) =>
             outagePage.dispatch({ key: 'latest', value: v }));
 
-        radioButtonCreate.setUpEventListenersRadioButton('btnRadioZ', (v) =>
+        radioButtonCreate.setUpEventListenersRadioButton('btnRadioK', (v) =>
             outagePage.dispatch({ key: 'twoYears', value: v }));
 
         document.getElementById("sl2").onchange = function (x) {
