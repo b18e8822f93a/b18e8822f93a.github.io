@@ -44,7 +44,7 @@ const outageChart = {
 const outageModule = {
 
     addTable: function (items) {
-        let tb0 = '<table class="T2" border=3><thead><th>Fuel</th><th>Plant</th><th>Unit</th><th>Unavailability (MW)</th><th>Capacity (MW)</th><th>Fraction</th><th>Duration</th><th>Start</th><th>End</th><th>Published</th></thead><tbody>';
+        let tb0 = '<table class="T2" border=3><thead><th>Fuel</th><th>Plant</th><th>Unit</th><th>Unavailability (MW)</th><th>Capacity (MW)</th><th>Availability (MW)</th><th>Fraction</th><th>Duration</th><th>Start</th><th>End</th><th>Published</th></thead><tbody>';
 
         items.forEach(element => {
             tb0 += '<tr>';
@@ -62,6 +62,9 @@ const outageModule = {
             tb0 += '</td>';
             tb0 += '<td>';
             tb0 += element.capacity;
+            tb0 += '</td>';
+            tb0 += '<td>';
+            tb0 += element.availability;
             tb0 += '</td>';
             tb0 += '<td>';
             tb0 += element.fraction;
