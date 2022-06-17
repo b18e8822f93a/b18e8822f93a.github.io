@@ -5,6 +5,7 @@ const globalVariable = {
     isLatestOnly: 0,
     byDate: '*',
     isTwoYears: "0",
+    isAvailability: "0",
 };
 
 

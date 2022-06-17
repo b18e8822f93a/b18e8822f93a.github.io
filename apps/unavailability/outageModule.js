@@ -122,17 +122,19 @@ const outagePage = {
             var q0 = globalVariable.filterLabel === '*' ? unitChartSeries : unitChartSeries.filter(x => x.label == globalVariable.filterLabel.replaceAll(' ', ''))
             var q = globalVariable.byDate === '*' ? q0 : q0.filter(x => x.key1 == globalVariable.byDate)
             var q3 = globalVariable.isTwoYears !== "0" ? q : q.map(o => { return { ...o, data: o.data.filter(x => x[2] === 0) }; });
+            var q4 = globalVariable.isAvailability === "0" ? q3 : q3.map(o => { return { ...o, data: o.data.map(x => [x[0], x[3]]) }; });
             console.log(globalVariable.filterLabel.replace(' ', ''))
             console.log(globalVariable.isTwoYears, "isTwoYears")
-            console.log(q3, "unit chart series")
-            addChart(q3, "dvChart2", outageChart);
+            console.log(q4, "unit chart series")
+            addChart(q4, "dvChart2", outageChart);
         }
         else {
             var q0 = globalVariable.filterLabel === '*' ? fuelChartSeries : fuelChartSeries.filter(x => x.name == globalVariable.filterLabel.replaceAll(' ', ''))
             var q = globalVariable.byDate === '*' ? q0 : q0.filter(x => x.key1 == globalVariable.byDate)
             var q3 = globalVariable.isTwoYears !== "0" ? q : q.map(o => { return { ...o, data: o.data.filter(x => x[2] === 0) }; });
+            var q4 = globalVariable.isAvailability === "0" ? q3 : q3.map(o => { return { ...o, data: o.data.map(x => [x[0], x[3]]) }; });
 
-            addChart(q3, "dvChart2", outageChart);
+            addChart(q4, "dvChart2", outageChart);
         }
     },
     dispatch: function (message) {
@@ -144,6 +146,11 @@ const outagePage = {
 
             case "twoYears":
                 globalVariable.isTwoYears = message.value;
+                this.reDrawChart();
+                break;
+
+            case "isUnavailability":
+                globalVariable.isAvailability = message.value;
                 this.reDrawChart();
                 break;
             case "filter":
@@ -184,6 +191,9 @@ const outagePage = {
 
         radioButtonCreate.setUpEventListenersRadioButton('btnRadioK', (v) =>
             outagePage.dispatch({ key: 'twoYears', value: v }));
+
+        radioButtonCreate.setUpEventListenersRadioButton('btnRadioJ', (v) =>
+            outagePage.dispatch({ key: 'isUnavailability', value: v }));
 
         document.getElementById("sl2").onchange = function (x) {
 
