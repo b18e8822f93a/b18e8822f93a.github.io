@@ -1,32 +1,16 @@
-
-#dvChart {
-    height: 100%;
-    width: 100%;
-}
-
-#dvChart2 {
-    height: 100%;
-    width: 100%;
-}
-
 .flex-container {
     display: flex;
-
     padding: 3px;
 }
 
 .flex-container>div {
     background-color: #f1f1f1;
     margin: 10px;
-
     font-size: 30px;
 }
 
 .mycard {
     border-radius: 25px;
-
-
-
 }
 
 p {

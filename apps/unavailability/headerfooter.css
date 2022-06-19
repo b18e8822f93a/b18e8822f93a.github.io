@@ -12,6 +12,13 @@
     width: 100%;
   }
 
+  @media screen and (max-width:576px) {
+    .grid-container-footer {
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
+    }
+  }
+
   .grid-container-heading>div,
   .grid-container-footer>div {
     border-left: 1px dashed var(--dashplease);
@@ -33,7 +40,7 @@
     font-family: "IBM Plex Mono", monospace;
   }
 
-  
+
   .headerFlex {
     align-items: center;
     display: flex;
@@ -46,7 +53,7 @@
     border-top: 1px dashed rgb(255, 246, 230);
   }
 
-  
+
   .logoImg {
     text-align: center;
     display: block;

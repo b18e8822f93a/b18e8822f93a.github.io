@@ -1,6 +1,9 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <script src="../cdn/jquery-3.3.1.min.js"></script>
     <script src="../cdn/bootstrap.min.js"></script>
     <script src="../cdn/highcharts.js"></script>
@@ -53,36 +56,39 @@
     <div class="grid-container">
 
         <div class="grid-item cell1">
-            <span class="helper ">
-                <a href="app.html">
-                    <img src="PowerClickLogo.svg" class=" bd-placeholder-img img-fluid rounded-start" width="140"
-                        height="100%">
+
+            <div class="btn-group" role="group">
+
+
+                <a href="index.html" style="text-align: center">
+                    <img src="PowerClickLogo.svg" width="140px" ; height="100%; style=" text-align: center">
                 </a>
-            </span>
-            <div class="btn-group  btn-group" role="group">
-                <input type="radio" class="btn-check " name="btnRadioZ" id="btnRadioZ1" autocomplete="off" checked
-                    value="0">
+
+            </div>
+            <div class="btn-group" role="group">
+                <input type="radio" class="btn-check " name="btnRadioZ" id="btnRadioZ1" autocomplete="off" checked value="0">
                 <label class="btn btn-outline-primary" for="btnRadioZ1">Ireland</label>
+            </div>
+
+            <div class="btn-group" role="group">
 
 
+                <a href="datasets.html" class=" btn btn-secondary" target="_blank"> Datasets</a>
 
+            </div>
 
-            </div> <a href="datasets.html" class="me-2" target="_blank"> <button
-                    class="btn btn-secondary">Datasets</button></a>
         </div>
         <div class="grid-item cell11">
 
-            <div class="btn-group  btn-group clCharts" role="group">
-                <input type="radio" class="btn-check " name="btnRadioK" id="btnRadioK1" autocomplete="off" checked
-                    value="0">
+            <div class="btn-group clCharts" role="group">
+                <input type="radio" class="btn-check " name="btnRadioK" id="btnRadioK1" autocomplete="off" checked value="0">
                 <label class="btn btn-outline-primary" for="btnRadioK1">16 weeks</label>
 
                 <input type="radio" class="btn-check" name="btnRadioK" id="btnRadioK2" autocomplete="off" value="1">
                 <label class="btn btn-outline-primary" for="btnRadioK2">2 years</label>
             </div>
             <div class="btn-group  btn-group clCharts" role="group">
-                <input type="radio" class="btn-check" name="btnRadioJ" id="btnRadioJ2" autocomplete="off" checked
-                    value="0">
+                <input type="radio" class="btn-check" name="btnRadioJ" id="btnRadioJ2" autocomplete="off" checked value="0">
                 <label class="btn btn-outline-primary" for="btnRadioJ2">Unavailability</label>
                 <input type="radio" class="btn-check " name="btnRadioJ" id="btnRadioJ1" autocomplete="off" value="1">
                 <label class="btn btn-outline-primary" for="btnRadioJ1">Availability</label>
@@ -90,29 +96,26 @@
 
             </div>
             <div class="btn-group  btn-group" role="group">
-                <input type="radio" class="btn-check " name="btnRadioC" id="btnRadioC1" autocomplete="off" checked
-                    value="0">
+                <input type="radio" class="btn-check " name="btnRadioC" id="btnRadioC1" autocomplete="off" checked value="0">
                 <label class="btn btn-outline-primary" for="btnRadioC1">Table</label>
 
                 <input type="radio" class="btn-check" name="btnRadioC" id="btnRadioC2" autocomplete="off" value="1">
                 <label class="btn btn-outline-primary" for="btnRadioC2">Chart</label>
             </div>
             <div class="btn-group  btn-group" role="group">
-                <input type="radio" class="btn-check " name="btnRadioA" id="btnRadioA1" autocomplete="off" checked
-                    value="0">
+                <input type="radio" class="btn-check " name="btnRadioA" id="btnRadioA1" autocomplete="off" checked value="0">
                 <label class="btn btn-outline-primary" for="btnRadioA1">Units</label>
 
                 <input type="radio" class="btn-check" name="btnRadioA" id="btnRadioA2" autocomplete="off" value="1">
                 <label class="btn btn-outline-primary" for="btnRadioA2">Fuels</label>
             </div>
 
-            <div class="btn-group btn-group" role="group" id="dvButtons"></div>
+            <div class="btn-group" role="group" id="dvButtons"></div>
+
             <div class="btn-group  btn-group" role="group">
-                <input checked type="checkbox" class="btn-check" name="btnRadioD" id="btnRadioD2" autocomplete="off"
-                    value="0">
+                <input checked type="checkbox" class="btn-check" name="btnRadioD" id="btnRadioD2" autocomplete="off" value="0">
                 <label class="btn btn-outline-primary" for="btnRadioD2">Capacities</label>
-                <input checked type="checkbox" class="btn-check" name="btnRadioD" id="btnRadioD3" autocomplete="off"
-                    value="1">
+                <input checked type="checkbox" class="btn-check" name="btnRadioD" id="btnRadioD3" autocomplete="off" value="1">
                 <label class="btn btn-outline-primary" for="btnRadioD3">Outages</label>
             </div>
             <!-- <div class="btn-group  btn-group" role="group">
