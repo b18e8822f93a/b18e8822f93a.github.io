@@ -1,0 +1,184 @@
+a,
+a:hover {
+  text-decoration: underline;
+  color:var(--textB);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.clTopRight{
+  padding-right: 1rem;
+ 
+  height: 100%;
+
+  display: flex;
+
+
+  justify-content: right;
+  align-items: flex-start;
+  
+}
+
+body {
+  margin: 0;
+  color: var(--textB);
+  font-family: "ClarendonLight";
+  font-size: 24px;
+}
+
+#introsubtitle {
+  color: green;
+}
+
+#patientsubtitle {
+  color: #333;
+}
+
+.updir {
+  padding-bottom: 5px;
+  font-size: 17px;
+  font-family: Verdana;
+  border-bottom-width: 1px;
+  border-bottom-color: Black;
+  border-bottom-style: solid;
+}
+
+.downdir {
+  padding-top: 5px;
+  font-size: 17px;
+  text-align: center;
+  font-family: Verdana;
+}
+
+.displayer {
+  border: thin;
+}
+
+.holder {
+  padding-left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.logo2 {
+  height: 100%;
+  text-align: center;
+}
+
+table {
+  height: 100%;
+ width: 100%;
+  border-width: thick;
+
+  text-align: center;
+}
+@font-face {
+  font-family: "ClarendonLight";
+  src: url("clarendonfs-light.ttf") format("truetype"), format("svg"); 
+}
+
+
+table td {
+  width: 33%;
+  text-align: center;
+}
+
+table tr {
+  height: 33%;
+  text-align: center;
+}
+
+tr:nth-child(odd) {
+  height: 25%;
+}
+
+tr:nth-child(2) {
+  height: 50%;
+}
+
+img {
+  border: 0;
+}
+
+#leftpanel .opacity {
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  background-color: #000;
+  position: absolute;
+  width: 4%;
+  top: 0;
+  bottom: 0;
+  zoom: 1;
+}
+
+.leftpanelinner {
+  position: fixed;
+  bottom: 0;
+}
+.leftpanelinner .updir {
+  margin-bottom: 1px;
+  overflow: hidden;
+}
+.leftpanelinner .downdir {
+  overflow: hidden;
+}
+.leftpanelinner span {
+  display: none;
+}
+.leftpanelinner:hover {
+  cursor: pointer;
+}
+
+#syn {
+  background-color: var(--main-bg-color1);
+  overflow: hidden;
+  position: relative;
+}
+:root[data-applied-mode="dark"] {
+  --main-bg-color1: rgb(146, 146, 96);
+  --main-bg-color2:  rgb(77, 114, 126);
+}
+
+
+:root[data-applied-mode="light"] {
+
+  --main-bg-color1: rgb(207, 207, 90);
+  --main-bg-color2:  rgb(122, 176, 194);
+}
+  
+
+#rm {
+  background-color: #41434a;
+  overflow: hidden;
+  position: relative;
+}
+
+#rems {
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+#address {
+  color: var(--textB);
+  background-color:var(--main-bg-color2);
+  overflow: hidden;
+  position: relative;
+}
+
+#ae {
+  background-color: #877963;
+  overflow: hidden;
+}

@@ -1,24 +1,11 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html data-applied-mode="light">
   <head>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-TNVWCEMCJM"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-TNVWCEMCJM");
-    </script>
     <title>Synthase Software House</title>
-
-    <link href="synthasestyle.css" rel="stylesheet" />
-    <script src="jquery.min.js"></script>
-
+    <link href="style.css" rel="stylesheet" />
+    <link href="CSS/cpSwitch.css" rel="stylesheet" />
+    <script src="cdn/jquery-3.3.1.min.js"></script>
+    <script src="cdn/tsc-2.23.min.js">   </script>
     <script type="text/javascript">
       $(document).ready(function () {
         var height = $(window).height(),
@@ -51,13 +38,25 @@
 
   <body>
     <div>
+      
       <div id="syn" style="width: 100%">
         <div class="holder">
           <table id="Table2" class="displayer">
             <tr>
               <td></td>
               <td></td>
-              <td></td>
+              <td style="text-align: right;">
+                <div class="clTopRight">
+                <div id="cpSwitchBox">
+                light
+                <label class="switch">
+                    <input id="swTheme" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                dark
+            </div>
+          </div>
+        </td>
             </tr>
             <tr>
               <td></td>
@@ -92,12 +91,11 @@
                   8B Portman Road,
                   Reading, 
                   RG30 1EA, United Kingdom</h3>
-
                 <br />
                 <br />
                 <br />
                 <span style="font-family: Georgia">
-                  020 7558 8474 <br />
+                  _44 (0)20 7558 8474 <br />
                   <br />
                   <br />
 
@@ -116,11 +114,8 @@
                 <br />
                 <br />
                 <br />
-                <span
-                  style="font-size: 16px; font-family: droid-serif, cambria"
-                >
-                  ©Synthase Ltd 2019 | Registered in England | Company No.
-                  06979644
+                <span style="font-size: 16px; font-family: droid-serif, cambria">
+                  ©Synthase Ltd 2019 | Registered in England | Company No. 06979644
                 </span>
               </td>
             </tr>
@@ -129,4 +124,7 @@
       </div>
     </div>
   </body>
+  <script>
+    ThemeModule.initialisecpSwitchBox();
+</script>
 </html>
